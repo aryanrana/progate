@@ -34,7 +34,6 @@
                 <button type="button" onclick="left()" class="control">Move left</button>
                 <button type="button" onclick="right()" class="control">Move Right</button><br>
                 <button type="button" onclick="reset()" class="control">RESET</button>
-                <button type="button" onclick="check()" class="control">CHECK</button>
             </div>
         </div> 
         </div>
@@ -69,11 +68,6 @@
         document.getElementById("i").innerHTML = val9;
         }
         
-        function check(){
-            if(va11==="1"&&va12==="2"&&va11==="3"&&va14==="4"&&va15==="5"&&va16==="6"&&va17==="7"&&va18==="8"&&va19==="_"){
-                alert("Congrats! You solved the puzzle! Click on reset for a new game.");
-            }
-        }
         
         function up() {
             if(val7==="_" || val8==="_" || val9==="_"){
@@ -118,7 +112,6 @@
                 }
             
             start();
-            check();
         }
           
         function down() {
@@ -162,7 +155,6 @@
                     val6=temp;
                 }
             start();
-            check();
         }
             
         function left() {
@@ -200,7 +192,6 @@
                 val9=temp;
             }
             start();
-            check();
         }
             
         function right() {
@@ -238,7 +229,6 @@
                 val9=temp;
             }
             start(); 
-            check();
         }
         
         function reset() {
@@ -253,6 +243,5 @@
             val9 = "8";
             start();
         }
-
     </script>
 </html>
