@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DynamicSlider</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div class="cover1">
+        <header>
+            <img src="Logo_font.png" class="logo"><p></p>
+            <img src="under.png" class="under"><p></p>
+        </header>
+        </div>
+        <div class="cover2">
+        <div class="main">
+            <div class="puzzle">
+                <button id="a">5</button>
+                <button id="b">4</button>
+                <button id="c">7</button>
+                <p></p>
+                <button id="d">_</button>
+                <button id="e">1</button>
+                <button id="f">6</button>
+                <p></p>
+                <button id="g">3</button>
+                <button id="h">2</button>
+                <button id="i">8</button>
+            </div>
+            <div class="controls">
+                <button type="button" onclick="up()" class="control">Move Up</button>
+                <button type="button" onclick="down()" class="control">Move down</button><br>
+                <button type="button" onclick="left()" class="control">Move left</button>
+                <button type="button" onclick="right()" class="control">Move Right</button><br>
+                <button type="button" onclick="reset()" class="control">RESET</button>
+            </div>
+        </div> 
+        </div>
+        <div class="cover3">
+        <footer>
+                <img src="footer-name.png" class="footer-name"><p></p>
+                <img src="footer-progate.png" class="footer-progate">
+        </footer>
+        </div>
+    </body>
+    <script>
+        var val1 = "5";
+        var val2 = "4";
+        var val3 = "7";
+        var val4 = "_";
+        var val5 = "1";
+        var val6 = "6";
+        var val7 = "3";
+        var val8 = "2";
+        var val9 = "8";
+        var temp;
+
+        function start() {
+        document.getElementById("a").innerHTML = val1;
+        document.getElementById("b").innerHTML = val2;
+        document.getElementById("c").innerHTML = val3;
+        document.getElementById("d").innerHTML = val4;
+        document.getElementById("e").innerHTML = val5;
+        document.getElementById("f").innerHTML = val6;
+        document.getElementById("g").innerHTML = val7;
+        document.getElementById("h").innerHTML = val8;
+        document.getElementById("i").innerHTML = val9;
+        }
+        
+        
+        function up() {
+            if(val7==="_" || val8==="_" || val9==="_"){
+                return;
+            }
+            
+            if(val1==="_")
+                {
+                    temp=val4;
+                    val4=val1;
+                    val1=temp;
+                }
+             else if(val2==="_")
+                {
+                    temp=val5;
+                    val5=val2;
+                    val2=temp;
+                }
+             else if(val3==="_")
+                {
+                    temp=val6;
+                    val6=val3;
+                    val3=temp;
+                }
+             else if(val4==="_")
+                {
+                    temp=val7;
+                    val7=val4;
+                    val4=temp;
+                }
+             else if(val5==="_")
+                {
+                    temp=val8;
+                    val8=val5;
+                    val5=temp;
+                }
+             else if(val6==="_")
+                {
+                    temp=val9;
+                    val9=val6;
+                    val6=temp;
+                }
+            
+            start();
+             if(val1==="1" && val2==="2" && val3==="3" && val4==="4" && val5==="5" && val6==="6" && val7==="7" && val8==="8" && val9==="_"){
+                alert("Congrats! You won the game. Reset for another game.");
+            }
+        }
+          
+        function down() {
+            if(val1==="_" || val2==="_" || val3==="_"){
+                return;
+            }
+            if(val4==="_")
+                {
+                    temp=val4;
+                    val4=val1;
+                    val1=temp;
+                }
+             else if(val5==="_")
+                {
+                    temp=val5;
+                    val5=val2;
+                    val2=temp;
+                }
+             else if(val6==="_")
+                {
+                    temp=val6;
+                    val6=val3;
+                    val3=temp;
+                }
+             else if(val7==="_")
+                {
+                    temp=val7;
+                    val7=val4;
+                    val4=temp;
+                }
+             else if(val8==="_")
+                {
+                    temp=val8;
+                    val8=val5;
+                    val5=temp;
+                }
+             else if(val9==="_")
+                {
+                    temp=val9;
+                    val9=val6;
+                    val6=temp;
+                }
+            start();
+             if(val1==="1" && val2==="2" && val3==="3" && val4==="4" && val5==="5" && val6==="6" && val7==="7" && val8==="8" && val9==="_"){
+                alert("Congrats! You won the game. Reset for another game.");
+            }
+        }
+            
+        function left() {
+            if(val6==="_" || val9==="_" || val3==="_"){
+                return;
+            }
+            if(val1==="_"){
+                temp=val1;
+                val1=val2;
+                val2=temp;
+            }
+            else if(val2==="_"){
+                temp=val2;
+                val2=val3;
+                val3=temp;
+            }
+            else if(val4==="_"){
+                temp=val4;
+                val4=val5;
+                val5=temp;
+            }
+            else if(val5==="_"){
+                temp=val5;
+                val5=val6;
+                val6=temp;
+            }
+            else if(val7==="_"){
+                temp=val7;
+                val7=val8;
+                val8=temp;
+            }
+            else if(val8==="_"){
+                temp=val8;
+                val8=val9;
+                val9=temp;
+            }
+            start();
+             if(val1==="1" && val2==="2" && val3==="3" && val4==="4" && val5==="5" && val6==="6" && val7==="7" && val8==="8" && val9==="_"){
+                alert("Congrats! You won the game. Reset for another game.");
+            }
+        }
+            
+        function right() {
+            if(val1==="_" || val4==="_" || val7==="_"){
+                return;
+            }
+            if(val2==="_"){
+                temp=val1;
+                val1=val2;
+                val2=temp;
+            }
+            else if(val3==="_"){
+                temp=val2;
+                val2=val3;
+                val3=temp;
+            }
+            else if(val5==="_"){
+                temp=val4;
+                val4=val5;
+                val5=temp;
+            }
+            else if(val6==="_"){
+                temp=val5;
+                val5=val6;
+                val6=temp;
+            }
+            else if(val8==="_"){
+                temp=val7;
+                val7=val8;
+                val8=temp;
+            }
+            else if(val9==="_"){
+                temp=val8;
+                val8=val9;
+                val9=temp;
+            }
+            start(); 
+            if(val1==="1" && val2==="2" && val3==="3" && val4==="4" && val5==="5" && val6==="6" && val7==="7" && val8==="8" && val9==="_"){
+                alert("Congrats! You won the game. Reset for another game.");
+            }
+        }
+        
+        function reset() {
+            val1 = "5";
+            val2 = "4";
+            val3 = "7";
+            val4 = "_";
+            val5 = "1";
+            val6 = "6";
+            val7 = "3";
+            val8 = "2";
+            val9 = "8";
+            start();
+        }
+    </script>
+</html>
